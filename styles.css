@@ -90,3 +90,18 @@ input {
     display: flex;
     justify-content: space-between;
 }
+
+.copy-btn {
+    outline: none;
+
+    background-color: #1F2937;
+    border: 1.5px solid #273549;
+    border-radius: 0 6px 6px 0;
+
+    height: 39px;
+    transform: translateX(-35.5px) translateY(36px);
+    
+    display: flex;
+    align-items: center;
+}
+
