@@ -11,8 +11,7 @@ const passwordTwo = document.getElementById("input-field-passwordTwo")
 
 // interactivity / functions
 generatePasswordBtn.addEventListener('click', function(){
-    let randoNum = Math.floor(Math.random() * characters.length)
-
+    if ( passwordOne.value === ""){
     for ( let i = 0; i < 15; i++ ){
        let randoNumOne = Math.floor(Math.random() * characters.length)
         console.log(randoNumOne)
@@ -21,5 +20,16 @@ generatePasswordBtn.addEventListener('click', function(){
         let randoNumTwo = Math.floor(Math.random() * characters.length)
         console.log(randoNumTwo)
         passwordTwo.value += characters[randoNumTwo] 
-    }
+    }} else {
+        passwordOne.value = ""
+        passwordTwo.value = ""
+        for ( let i = 0; i < 15; i++ ){
+            let randoNumOne = Math.floor(Math.random() * characters.length)
+             console.log(randoNumOne)
+             passwordOne.value += characters[randoNumOne]
+     
+             let randoNumTwo = Math.floor(Math.random() * characters.length)
+             console.log(randoNumTwo)
+             passwordTwo.value += characters[randoNumTwo] 
+    } }
 })
