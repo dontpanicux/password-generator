@@ -33,3 +33,28 @@ generatePasswordBtn.addEventListener('click', function(){
              passwordTwo.value += characters[randoNumTwo] 
     } }
 })
+
+// Copy to Clipboard function
+/*
+    Code examples + info about the 'new' Clipboard API
+    https://www.freecodecamp.org/news/copy-text-to-clipboard-javascript/
+*/
+
+// Copy btn vars
+    const copyBtnPasswordOne = document.getElementById("copy-btn-passwordOne")
+    const copyBtnPasswordTwo = document.getElementById("copy-btn-passwordTwo")
+
+    copyBtnPasswordOne.addEventListener('click', function(){
+        console.log('copyBtnPasswordOne clicked')
+        let passwordOneText = document.getElementById('input-field-passwordOne').value
+        console.log(`${passwordOneText} ${typeof passwordOneText}`)
+
+        // interacting with the Clipboard API
+        navigator.clipboard.writeText(`${passwordOneText}`);    
+
+	    alert(`Password copied to clipboard: ${passwordOneText}`);
+    })
+    
+    copyBtnPasswordTwo.addEventListener('click', function(){
+        console.log('copyBtnPasswordTwo clicked')
+    })
