@@ -83,7 +83,9 @@ input {
     font-size: 16px;
     font-weight: 500;
     line-height: 32px;
-    text-align: center;
+    /* text-align: center; */
+    /* padding to account for addition of 'floating' Copy Btn */
+    padding-left: 12px;
 }
 
 .flex-container-util {
