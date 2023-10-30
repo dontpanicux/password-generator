@@ -107,3 +107,42 @@ input {
     align-items: center;
 }
 
+/*$$$$$$
+THIS IS HOW IM PLANNING TO HIDE/SHOW TOASTS
+
+$$$$$$*/
+
+/* #copy-success-passwordOne {
+    display: none;
+} */
+
+.copy-success-toast-noti {
+    color: #55F991;
+    font-size: 16px;
+    font-weight: 500;
+
+    margin-top: 15px;
+   
+
+    background-color: #273549;
+    border-radius: 6px;
+    
+    width: 190px;
+    height: 39px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.copy-success-toast-noti > img {
+    width: 24px;
+    height: 24px;
+}
+
+#toast-noti-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 34px;
+}
