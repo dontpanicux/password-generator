@@ -7,6 +7,8 @@ const generatePasswordBtn = document.getElementById("generate-pass-btn")
 const passwordOne = document.getElementById("input-field-passwordOne")
 const passwordTwo = document.getElementById("input-field-passwordTwo")
 
+const notificationContainer = document.getElementById("toast-noti-container")
+
 
 
 // interactivity / functions
@@ -53,6 +55,13 @@ generatePasswordBtn.addEventListener('click', function(){
         navigator.clipboard.writeText(`${passwordOneText}`);    
 
 	    //alert(`Password copied to clipboard: ${passwordOneText}`);
+        notificationContainer.innerHTML = `
+        <div id="toast-noti-container-One">
+            <div class="copy-success-toast-noti copy-success-toast-noti-pass-one">
+                <span>Password Copied!</span>
+                <img src="assets/circle-check-regular-55F991.svg" alt="">
+            </div>
+        </div>`
     })
     
     copyBtnPasswordTwo.addEventListener('click', function(){
@@ -61,4 +70,12 @@ generatePasswordBtn.addEventListener('click', function(){
         let passwordTwoText = document.getElementById("input-field-passwordTwo").value
         // interacting with the Clipboard API
         navigator.clipboard.writeText(`${passwordTwoText}`)
+
+        notificationContainer.innerHTML = 
+            `
+            <div class="copy-success-toast-noti copy-success-toast-noti-pass-two">
+                <span>Password Copied!</span>
+                <img src="assets/circle-check-regular-55F991.svg" alt="">
+            </div>
+            `
     })
