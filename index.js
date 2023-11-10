@@ -49,7 +49,7 @@ generatePasswordBtn.addEventListener('click', function(){
     copyBtnPasswordOne.addEventListener('click', function(){
         //console.log('copyBtnPasswordOne clicked')
         let passwordOneText = document.getElementById('input-field-passwordOne').value
-        console.log(`${passwordOneText} ${typeof passwordOneText}`)
+        // console.log(`${passwordOneText} ${typeof passwordOneText}`)
 
         // interacting with the Clipboard API
         navigator.clipboard.writeText(`${passwordOneText}`);    
@@ -62,6 +62,10 @@ generatePasswordBtn.addEventListener('click', function(){
                 <img src="assets/circle-check-regular-55F991.svg" alt="">
             </div>
         </div>`
+        // remove the notication after ~3s
+        setTimeout(function(){
+            document.getElementById('toast-noti-container-One').remove();
+        }, 3000)
     })
     
     copyBtnPasswordTwo.addEventListener('click', function(){
