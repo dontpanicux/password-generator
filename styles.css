@@ -60,6 +60,14 @@ body {
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }
 
+#generate-pass-btn:hover,
+#generate-pass-btn:active {
+    background-color: #299654;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+
 hr {
     border: none;
 
