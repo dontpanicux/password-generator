@@ -65,7 +65,8 @@ generatePasswordBtn.addEventListener('click', function(){
         // remove the notication after ~3s
         setTimeout(function(){
             document.getElementById('toast-noti-container-One').remove();
-        }, 3000)
+            // ?? add an animation to the notification to 'ease it out' ??
+        }, 4000)
     })
     
     copyBtnPasswordTwo.addEventListener('click', function(){
@@ -75,11 +76,16 @@ generatePasswordBtn.addEventListener('click', function(){
         // interacting with the Clipboard API
         navigator.clipboard.writeText(`${passwordTwoText}`)
 
-        notificationContainer.innerHTML = 
-            `
+        notificationContainer.innerHTML = `
+        <div id="toast-noti-container-Two">
             <div class="copy-success-toast-noti copy-success-toast-noti-pass-two">
                 <span>Password Copied!</span>
                 <img src="assets/circle-check-regular-55F991.svg" alt="">
             </div>
-            `
+        </div>`
+        // remove the notication after ~3s
+        setTimeout(function(){
+            document.getElementById('toast-noti-container-Two').remove();
+            // ?? add an animation to the notification to 'ease it out' ??
+        }, 4000)
     })
