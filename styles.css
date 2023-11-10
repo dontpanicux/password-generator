@@ -107,14 +107,21 @@ input {
     align-items: center;
 }
 
-/*$$$$$$
-THIS IS HOW IM PLANNING TO HIDE/SHOW TOASTS
+.copy-btn:hover,
+.copy-btn:active {
+    background-color: #2F3E53;
+    cursor: pointer;
+    
+}
 
-$$$$$$*/
+.copy-btn:hover svg path,
+.copy-btn:active svg path {
+    fill: #10B981;
+}
 
-/* #copy-success-passwordOne {
-    display: none;
-} */
+
+
+/* Toast Notifications */
 
 #toast-noti-container {
     display: flex;
